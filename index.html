@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Daril Arale, developpeur web et designer graphique. Decouvrez son parcours, ses competences et ses projets web et design dans une experience one-page premium.">
-    <meta name="keywords" content="Daril Arale, portfolio, developpeur web, designer graphique, CV, projets web, design graphique, Benin">
+    <meta name="description" content="Portfolio de Daril Arale, développeur web à Parakou. Découvrez son parcours, ses compétences techniques et ses projets web.">
+    <meta name="keywords" content="Daril Arale, portfolio, développeur web, développeur full-stack, projets web, Bénin">
     <meta name="author" content="Daril Arale">
-    <meta property="og:title" content="Daril Arale | Portfolio & CV">
-    <meta property="og:description" content="Un portfolio one-page inspire d'un CV premium pour presenter parcours, competences et projets.">
+    <meta property="og:title" content="Daril Arale | Développeur web">
+    <meta property="og:description" content="Parcours, compétences techniques et projets web de Daril Arale, développeur web au Bénin.">
     <meta property="og:type" content="website">
     <style>
 :root {
@@ -183,7 +183,6 @@ select {
 .softskills-panel,
 .timeline-card,
 .project-card,
-.design-showcase,
 .contact-card {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
     border: 1px solid var(--line);
@@ -413,7 +412,6 @@ select {
 .softskills-panel,
 .timeline-card,
 .project-card,
-.design-showcase,
 .contact-card {
     border-radius: var(--radius-md);
     padding: 28px;
@@ -421,7 +419,6 @@ select {
 
 .spotlight-card p:last-child,
 .section-copy p,
-.design-copy p,
 .contact-copy p,
 .timeline-card p,
 .project-card p,
@@ -545,6 +542,7 @@ select {
 .timeline-column {
     display: grid;
     gap: 18px;
+    align-content: start;
 }
 
 .timeline-head {
@@ -583,10 +581,6 @@ select {
     margin-top: 20px;
     color: var(--accent);
     font-weight: 600;
-}
-
-.design-showcase {
-    margin-top: 28px;
 }
 
 .contact-section {
@@ -675,7 +669,6 @@ select {
 
 .inner-hero-card,
 .content-card,
-.filter-bar,
 .project-media-card,
 .contact-info-card,
 .contact-form-card,
@@ -820,29 +813,6 @@ select {
     color: var(--accent);
 }
 
-.filter-bar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    padding: 18px;
-    margin-bottom: 24px;
-}
-
-.filter-btn {
-    padding: 10px 16px;
-    border-radius: 999px;
-    border: 1px solid var(--line);
-    background: transparent;
-    color: var(--muted);
-    cursor: pointer;
-}
-
-.filter-btn.active,
-.filter-btn:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-}
-
 .projects-grid-modern {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -867,29 +837,6 @@ select {
     margin-top: 18px;
     color: var(--accent);
     font-weight: 600;
-}
-
-.design-grid-modern {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
-}
-
-.design-card-modern {
-    overflow: hidden;
-    border-radius: var(--radius-md);
-    border: 1px solid var(--line);
-    background: #151515;
-}
-
-.design-card-modern img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-}
-
-.design-card-modern div {
-    padding: 14px 16px;
 }
 
 .contact-page-grid {
@@ -1018,13 +965,18 @@ select {
     .projects-grid-modern,
     .faq-grid,
     .stats-strip,
-    .form-grid,
-    .design-grid-modern {
+    .form-grid {
         grid-template-columns: 1fr;
     }
 
     .identity-panel {
         position: static;
+    }
+}
+
+@media (min-width: 861px) and (max-width: 1080px) {
+    .timeline-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
@@ -1098,7 +1050,6 @@ select {
     .softskills-panel,
     .timeline-card,
     .project-card,
-    .design-showcase,
     .contact-card {
         padding: 22px;
     }
@@ -1224,7 +1175,7 @@ select {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <title>Daril Arale | Portfolio & CV</title>
+    <title>Daril Arale | Développeur web</title>
 </head>
 <body>
     <div class="page-shell">
@@ -1242,8 +1193,8 @@ select {
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="nav-actions">
-                    <a href="Daril Arale – Curriculum Vitae2.pdf" class="nav-link-secondary" download>
-                        <i class="fas fa-download"></i> Télécharger mon CV
+                    <a href="cv.html" class="nav-link-secondary">
+                        <i class="fas fa-file-lines"></i> Voir mon CV
                     </a>
                     <button class="hamburger" type="button" aria-label="Ouvrir le menu">
                         <span></span>
@@ -1259,7 +1210,7 @@ select {
                 <div class="container hero-layout">
                     <aside class="identity-panel reveal">
                         <div class="identity-name">DARIL<br><span>ARALE</span></div>
-                        <p class="identity-title">Developpeur Web / Designer Graphique</p>
+                        <p class="identity-title">Développeur web</p>
 
                         <div class="portrait-card">
                             <div class="portrait-avatar">
@@ -1273,7 +1224,7 @@ select {
                             <ul class="info-list">
                                 <li><i class="fas fa-phone"></i><span>+229 0190617441 / 0140416495</span></li>
                                 <li><i class="fas fa-envelope"></i><span>araledaril@gmail.com</span></li>
-                                <li><i class="fas fa-location-dot"></i><span>Okedama, Parakou, Benin</span></li>
+                                <li><i class="fas fa-location-dot"></i><span>Cotonou, Benin</span></li>
                             </ul>
                         </div>
 
@@ -1289,8 +1240,8 @@ select {
 
                     <div class="hero-content">
                         <div class="hero-intro reveal">
-                            <h1>Je conçois des interfaces web et des identités visuelles à fort impact.</h1>
-                            <p class="hero-summary">Développeur web et designer graphique, je spécialise dans la création d'interfaces modernes et performantes. Mon expertise couvre le développement front-end, le design UX/UI et la conception de solutions digitales adaptées aux besoins professionnels.</p>
+                            <h1>Je développe des applications web utiles et adaptées aux besoins réels.</h1>
+                            <p class="hero-summary">Développeur web, je réalise des sites et des applications avec HTML, CSS, JavaScript, React et Laravel, du front-end aux fonctionnalités côté serveur.</p>
                             <div class="hero-actions">
                                 <a href="projets.html" class="btn btn-primary">Voir mes projets</a>
                                 <a href="#contact" class="btn btn-secondary">Me contacter</a>
@@ -1300,7 +1251,7 @@ select {
                         <div class="hero-grid">
                             <article class="spotlight-card reveal" id="apropos">
                                 <p class="card-kicker">// A propos de moi</p>
-                                <p>Creatif, rigoureux et autonome, je m'investis pleinement dans chaque projet. Mon objectif est de transformer un besoin en une interface credible, moderne et performante, que ce soit pour une vitrine web, un outil interactif ou un support visuel de marque.</p>
+                                <p>Rigoureux et autonome, je transforme les besoins en fonctionnalités web claires et fiables. J’aime comprendre le problème, choisir une solution adaptée et la faire évoluer avec les retours des utilisateurs.</p>
                             </article>
 
                             <article class="stats-card reveal">
@@ -1310,12 +1261,12 @@ select {
                                         <span>Stages professionnels</span>
                                     </div>
                                     <div>
-                                        <strong>30+</strong>
+                                        <strong>Plusieurs</strong>
                                         <span>Projets web</span>
                                     </div>
                                     <div>
-                                        <strong>10+</strong>
-                                        <span>Creations design</span>
+                                        <strong>Technologies web</strong>
+                                        <span>Adaptées selon votre besoin</span>
                                     </div>
                                     <div>
                                         <strong>2023-2026</strong>
@@ -1332,24 +1283,24 @@ select {
                 <div class="container">
                     <div class="section-heading reveal">
                         <p class="eyebrow">Ce que je propose</p>
-                        <h2>Des services qui boostent la présence en ligne de votre entreprise.</h2>
+                        <h2>Des solutions web pour répondre aux besoins de votre activité.</h2>
                     </div>
                     <div class="service-grid">
                         <article class="service-card reveal">
                             <i class="fas fa-code"></i>
-                            <h3>Developpement web</h3>
-                            <p>Creation de pages et interfaces responsives, structurees et rapides a prendre en main.</p>
+                            <h3>Développement front-end</h3>
+                            <p>Création de pages web responsives avec HTML, CSS, JavaScript et React.</p>
                         </article>
                         <article class="service-card reveal">
-                            <i class="fas fa-pen-ruler"></i>
-                            <h3>Design graphique</h3>
-                            <p>Conception d'identites visuelles, affiches et supports de communication coherents.</p>
+                            <i class="fas fa-server"></i>
+                            <h3>Applications web</h3>
+                            <p>Développement de fonctionnalités côté serveur avec Laravel et intégration de données.</p>
                         </article>
-                        <!-- <article class="service-card reveal">
-                            <i class="fas fa-layer-group"></i>
-                            <h3>UI orientee clarte</h3>
-                            <p>Organisation des contenus, hierarchie visuelle et parcours utilisateur lisibles.</p>
-                        </article> -->
+                        <article class="service-card reveal">
+                            <i class="fas fa-screwdriver-wrench"></i>
+                            <h3>Maintenance web</h3>
+                            <p>Correction d’anomalies, amélioration de fonctionnalités et assistance technique.</p>
+                        </article>
                     </div>
                 </div>
             </section>
@@ -1358,21 +1309,13 @@ select {
                 <div class="container two-column">
                     <div class="section-copy reveal">
                         <p class="eyebrow">Competences</p>
-                        <h2>Un profil hybride entre technique, execution visuelle et autonomie.</h2>
-                        <p>Le portfolio reprend la logique de lecture d'un CV, mais avec une mise en scene plus editoriale. Les competences ci-dessous representent les domaines que je mobilise le plus dans mes projets.</p>
+                        <h2>Des compétences techniques au service de projets web concrets.</h2>
+                        <p>Je développe des sites et des applications web en m’appuyant sur les technologies que j’utilise dans mes projets.</p>
                     </div>
                     <div class="skills-panel reveal">
                         <div class="skill-row">
                             <div class="skill-top"><span>HTML5 / CSS3</span><span>90%</span></div>
                             <div class="skill-bar"><span class="skill-fill" style="--level:90%"></span></div>
-                        </div>
-                        <div class="skill-row">
-                            <div class="skill-top"><span>Adobe Photoshop</span><span>85%</span></div>
-                            <div class="skill-bar"><span class="skill-fill" style="--level:85%"></span></div>
-                        </div>
-                        <div class="skill-row">
-                            <div class="skill-top"><span>Adobe Illustrator</span><span>80%</span></div>
-                            <div class="skill-bar"><span class="skill-fill" style="--level:80%"></span></div>
                         </div>
                         <div class="skill-row">
                             <div class="skill-top"><span>JavaScript</span><span>70%</span></div>
@@ -1402,7 +1345,6 @@ select {
                             <span>Resolution de problemes</span>
                             <span>Esprit d'analyse</span>
                             <span>Gestion du temps</span>
-                            <span>Creativite</span>
                         </div>
                     </div>
                 </div>
@@ -1421,12 +1363,12 @@ select {
                             <article class="timeline-card">
                                 <div class="timeline-head">
                                     <div>
-                                        <h3>Developpeur stagiaire</h3>
-                                        <p>TPAPY Bach Consulting</p>
+                                        <h3>Stage developpeur full-stack</h3>
+                                        <p>SESUR Bénin</p>
                                     </div>
-                                    <span>Juil. 2024 - Sept. 2024<br>Juil. 2025 - Sept. 2025</span>
+                                    <span>Oct. 2026 - Avril 2027</span>
                                 </div>
-                                <p>Participation a plusieurs projets, mise en pratique des competences techniques et developpement de l'autonomie dans un cadre professionnel reel.</p>
+                                <p>Participation aux activites de developpement full-stack et contribution a la conception, au developpement et a la maintenance de solutions numeriques.</p>
                             </article>
                             <article class="timeline-card">
                                 <div class="timeline-head">
@@ -1437,6 +1379,16 @@ select {
                                     <span>Fev. 2026 - Mai. 2026</span>
                                 </div>
                                 <p>Contribution au developpement et a la maintenance d'applications, assistance technique et suivi de projets IT en collaboration avec l'equipe.</p>
+                            </article>
+                            <article class="timeline-card">
+                                <div class="timeline-head">
+                                    <div>
+                                        <h3>Developpeur stagiaire</h3>
+                                        <p>TPAPY Bach Consulting</p>
+                                    </div>
+                                    <span>Juil. 2024 - Sept. 2024<br>Juil. 2025 - Sept. 2025</span>
+                                </div>
+                                <p>Participation a plusieurs projets, mise en pratique des competences techniques et developpement de l'autonomie dans un cadre professionnel reel.</p>
                             </article>
                         </div>
 
@@ -1454,19 +1406,10 @@ select {
                             <article class="timeline-card">
                                 <div class="timeline-head">
                                     <div>
-                                        <h3>CEG Okedama - Parakou</h3>
+                                        <h3>CEG Okedama</h3>
                                         <p>Baccalaureat</p>
                                     </div>
                                     <span>2020 - 2023</span>
-                                </div>
-                            </article>
-                            <article class="timeline-card">
-                                <div class="timeline-head">
-                                    <div>
-                                        <h3>College Catholique Saint Thomas d'Aquin</h3>
-                                        <p>BEPC</p>
-                                    </div>
-                                    <span>2016 - 2020</span>
                                 </div>
                             </article>
                         </div>
@@ -1478,10 +1421,19 @@ select {
                 <div class="container">
                     <div class="section-heading reveal">
                         <p class="eyebrow">Projets</p>
-                        <h2>Des preuves concretes de ma progression en developpement et en design.</h2>
+                        <h2>Des projets qui illustrent ma progression en développement web.</h2>
                     </div>
 
                     <div class="project-grid">
+                        <article class="project-card reveal">
+                            <div class="project-type">Application full-stack</div>
+                            <h3>Media Downloader</h3>
+                            <p>Application web d’analyse et de téléchargement de médias, avec choix des formats, suivi de progression, comptes utilisateurs et stockage PostgreSQL.</p>
+                            <div class="tag-row">
+                                <span>Node.js</span><span>PostgreSQL</span><span>yt-dlp</span><span>Docker</span>
+                            </div>
+                            <a href="https://github.com/ri389/Mediadownloader" target="_blank" rel="noopener noreferrer">Voir le code sur GitHub</a>
+                        </article>
                         <article class="project-card reveal">
                             <div class="project-type">Web app</div>
                             <h3>Application Calculatrice</h3>
@@ -1520,19 +1472,6 @@ select {
                         </article>
                     </div>
 
-                    <div class="design-showcase reveal">
-                        <div class="design-copy">
-                            <div class="mini-title">Design graphique</div>
-                            <p>Je realise aussi des affiches publicitaires, identites visuelles et visuels promotionnels. La partie design renforce mon approche de la composition, de la hierarchie et du detail visuel dans les interfaces.</p>
-                        </div>
-                        <div class="tag-row">
-                            <span>Affiches publicitaires</span>
-                            <span>Packaging</span>
-                            <span>Logo design</span>
-                            <span>Visuels reseaux sociaux</span>
-                        </div>
-                        <a href="projets.html" class="text-link">Voir l'ensemble des realisations</a>
-                    </div>
                 </div>
             </section>
 
@@ -1540,14 +1479,14 @@ select {
                 <div class="container contact-layout">
                     <div class="contact-copy reveal">
                         <p class="eyebrow">Contact</p>
-                        <h2>Tu veux un site, un visuel ou une collaboration ? Parlons-en.</h2>
-                        <p>Je suis disponible pour echanger sur des projets web, des besoins en design graphique ou une collaboration professionnelle. Tu peux me contacter directement par email, telephone ou WhatsApp.</p>
+                        <h2>Tu as un projet web ou un besoin technique ? Parlons-en.</h2>
+                        <p>Je suis disponible pour échanger sur le développement d’un site ou d’une application web, la maintenance d’un outil ou une collaboration professionnelle. Tu peux me contacter par email, téléphone ou WhatsApp.</p>
                     </div>
 
                     <div class="contact-card reveal">
                         <a href="mailto:araledaril@gmail.com"><i class="fas fa-envelope"></i><span>araledaril@gmail.com</span></a>
                         <a href="tel:+2290190617441"><i class="fas fa-phone"></i><span>+229 0190617441</span></a>
-                        <a href="https://wa.me/2290140416495" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i><span>WhatsApp direct</span></a>
+                        <a href="https://wa.me/+2290190617441" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i><span>WhatsApp direct</span></a>
                         <a href="contact.html"><i class="fas fa-arrow-up-right-from-square"></i><span>Formulaire complet</span></a>
                     </div>
                 </div>

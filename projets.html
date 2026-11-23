@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Selection de projets web et design de Daril Arale.">
-    <meta name="keywords" content="projets, portfolio, developpeur web, designer graphique, Daril Arale">
+    <meta name="description" content="Projets web développés par Daril Arale, développeur web au Bénin.">
+    <meta name="keywords" content="projets web, portfolio, développeur web, Daril Arale, Bénin">
     <meta name="author" content="Daril Arale">
     <style>
 :root {
@@ -180,7 +180,6 @@ select {
 .softskills-panel,
 .timeline-card,
 .project-card,
-.design-showcase,
 .contact-card {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
     border: 1px solid var(--line);
@@ -410,7 +409,6 @@ select {
 .softskills-panel,
 .timeline-card,
 .project-card,
-.design-showcase,
 .contact-card {
     border-radius: var(--radius-md);
     padding: 28px;
@@ -418,7 +416,6 @@ select {
 
 .spotlight-card p:last-child,
 .section-copy p,
-.design-copy p,
 .contact-copy p,
 .timeline-card p,
 .project-card p,
@@ -582,10 +579,6 @@ select {
     font-weight: 600;
 }
 
-.design-showcase {
-    margin-top: 28px;
-}
-
 .contact-section {
     padding-bottom: 72px;
 }
@@ -672,7 +665,6 @@ select {
 
 .inner-hero-card,
 .content-card,
-.filter-bar,
 .project-media-card,
 .contact-info-card,
 .contact-form-card,
@@ -817,29 +809,6 @@ select {
     color: var(--accent);
 }
 
-.filter-bar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    padding: 18px;
-    margin-bottom: 24px;
-}
-
-.filter-btn {
-    padding: 10px 16px;
-    border-radius: 999px;
-    border: 1px solid var(--line);
-    background: transparent;
-    color: var(--muted);
-    cursor: pointer;
-}
-
-.filter-btn.active,
-.filter-btn:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-}
-
 .projects-grid-modern {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -864,29 +833,6 @@ select {
     margin-top: 18px;
     color: var(--accent);
     font-weight: 600;
-}
-
-.design-grid-modern {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
-}
-
-.design-card-modern {
-    overflow: hidden;
-    border-radius: var(--radius-md);
-    border: 1px solid var(--line);
-    background: #151515;
-}
-
-.design-card-modern img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-}
-
-.design-card-modern div {
-    padding: 14px 16px;
 }
 
 .contact-page-grid {
@@ -1015,8 +961,7 @@ select {
     .projects-grid-modern,
     .faq-grid,
     .stats-strip,
-    .form-grid,
-    .design-grid-modern {
+    .form-grid {
         grid-template-columns: 1fr;
     }
 
@@ -1095,7 +1040,6 @@ select {
     .softskills-panel,
     .timeline-card,
     .project-card,
-    .design-showcase,
     .contact-card {
         padding: 22px;
     }
@@ -1251,27 +1195,30 @@ select {
                 <div class="container">
                     <div class="inner-hero-card reveal">
                         <p class="eyebrow">Portfolio projets</p>
-                        <h1 class="inner-title">Developpement web et design graphique.</h1>
-                        <p class="inner-subtitle">Une vue plus claire de mes realisations, organisee par type de production pour montrer l'evolution de mon profil hybride.</p>
+                        <h1 class="inner-title">Développement web.</h1>
+                        <p class="inner-subtitle">Une sélection de sites et d’applications qui présentent mon parcours et mes compétences techniques.</p>
                     </div>
                 </div>
             </section>
 
             <section class="section-block">
                 <div class="container">
-                    <div class="filter-bar reveal">
-                        <button class="filter-btn active" data-filter="all">Tous</button>
-                        <button class="filter-btn" data-filter="web">Developpement web</button>
-                        <button class="filter-btn" data-filter="design">Design graphique</button>
-                    </div>
-
                     <div class="section-heading reveal">
                         <p class="eyebrow">Projets web</p>
-                        <h2>Interfaces et mini-applications.</h2>
+                        <h2>Applications web.</h2>
                     </div>
 
                     <div class="projects-grid-modern">
-                        <article class="project-media-card reveal project-card" data-category="web">
+                        <article class="project-media-card reveal project-card">
+                            <img src="Images_et_icônes/mediadownloader-preview.svg" alt="Aperçu de l’application Media Downloader">
+                            <div class="project-media-body">
+                                <h3>Media Downloader</h3>
+                                <p>Application full-stack qui analyse les liens directs et récupère des médias depuis des plateformes compatibles avec yt-dlp. Formats, qualité et progression des téléchargements sont gérés depuis l’interface.</p>
+                                <div class="project-tech"><span>Node.js</span><span>PostgreSQL</span><span>yt-dlp</span><span>Docker</span></div>
+                                <a href="https://github.com/ri389/Mediadownloader" target="_blank" rel="noopener noreferrer">Voir le code sur GitHub</a>
+                            </div>
+                        </article>
+                        <article class="project-media-card reveal project-card">
                             <img src="Projets/Calculator app/Capture d'écran 2025-02-22 103342.png" alt="Application Calculatrice">
                             <div class="project-media-body">
                                 <h3>Application Calculatrice</h3>
@@ -1280,7 +1227,7 @@ select {
                                 <a href="Projets/Calculator app/index.html" target="_blank" rel="noopener noreferrer">Voir le projet</a>
                             </div>
                         </article>
-                        <article class="project-media-card reveal project-card" data-category="web">
+                        <article class="project-media-card reveal project-card">
                             <img src="Projets/Générateur de mot de passe/Capture d'écran 2025-02-22 103646.png" alt="Generateur de mot de passe">
                             <div class="project-media-body">
                                 <h3>Generateur de mot de passe</h3>
@@ -1289,7 +1236,7 @@ select {
                                 <a href="Projets/Générateur de mot de passe/index.html" target="_blank" rel="noopener noreferrer">Voir le projet</a>
                             </div>
                         </article>
-                        <article class="project-media-card reveal project-card" data-category="web">
+                        <article class="project-media-card reveal project-card">
                             <img src="Projets/Note-app/Capture d'écran 2025-02-22 112140.png" alt="Application de notes">
                             <div class="project-media-body">
                                 <h3>Application de notes</h3>
@@ -1298,7 +1245,7 @@ select {
                                 <a href="Projets/Note-app/index.html" target="_blank" rel="noopener noreferrer">Voir le projet</a>
                             </div>
                         </article>
-                        <article class="project-media-card reveal project-card" data-category="web">
+                        <article class="project-media-card reveal project-card">
                             <img src="Projets/Quizz app/Capture d'écran 2025-02-22 112310.png" alt="Application Quiz">
                             <div class="project-media-body">
                                 <h3>Application Quiz</h3>
@@ -1307,7 +1254,7 @@ select {
                                 <a href="Projets/Quizz app/index.html" target="_blank" rel="noopener noreferrer">Voir le projet</a>
                             </div>
                         </article>
-                        <article class="project-media-card reveal project-card" data-category="web">
+                        <article class="project-media-card reveal project-card">
                             <img src="Projets/Quote generator/Capture d'écran 2025-02-22 112439.png" alt="Generateur de citations">
                             <div class="project-media-body">
                                 <h3>Generateur de citations</h3>
@@ -1316,7 +1263,7 @@ select {
                                 <a href="Projets/Quote generator/index.html" target="_blank" rel="noopener noreferrer">Voir le projet</a>
                             </div>
                         </article>
-                        <article class="project-media-card reveal project-card" data-category="web">
+                        <article class="project-media-card reveal project-card">
                             <img src="Projets/To-do list/Capture d'écran 2025-02-22 113815.png" alt="To-do list">
                             <div class="project-media-body">
                                 <h3>To-do list</h3>
@@ -1329,23 +1276,6 @@ select {
                 </div>
             </section>
 
-            <section class="section-block">
-                <div class="container">
-                    <div class="section-heading reveal">
-                        <p class="eyebrow">Design graphique</p>
-                        <h2>Visuels, affiches et identites.</h2>
-                    </div>
-
-                    <div class="design-grid-modern">
-                        <article class="design-card-modern reveal project-card" data-category="design"><img src="Mes réalisations/Mam'Anniersaire_Plan de travail 1.jpg" alt="Affiche Maman"><div><strong>Affiche Maman</strong><p>Affiche d'anniversaire.</p></div></article>
-                        <article class="design-card-modern reveal project-card" data-category="design"><img src="Mes réalisations/Ismath_cookies_Plan de travail 1.jpg" alt="Ismath Cookies"><div><strong>Ismath Cookies</strong><p>Affiche publicitaire.</p></div></article>
-                        <article class="design-card-modern reveal project-card" data-category="design"><img src="Mes réalisations/El-Shadai yaourt.jpg" alt="El-Shadai Yaourt"><div><strong>El-Shadai Yaourt</strong><p>Packaging produit.</p></div></article>
-                        <article class="design-card-modern reveal project-card" data-category="design"><img src="Mes réalisations/La cascade des glaces_Plan de travail 1.jpg" alt="La Cascade des Glaces"><div><strong>La Cascade des Glaces</strong><p>Affiche promotionnelle.</p></div></article>
-                        <article class="design-card-modern reveal project-card" data-category="design"><img src="Mes réalisations/logo Chapelle de la Sanctification.png" alt="Logo Chapelle"><div><strong>Logo Chapelle</strong><p>Identite visuelle.</p></div></article>
-                        <article class="design-card-modern reveal project-card" data-category="design"><img src="Mes réalisations/Mon logo_Plan de travail 1_Plan de travail 1.png" alt="Logo Personnel"><div><strong>Logo personnel</strong><p>Identite de marque.</p></div></article>
-                    </div>
-                </div>
-            </section>
         </main>
 
         <footer class="site-footer">
