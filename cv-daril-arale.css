@@ -229,6 +229,27 @@ body {
   gap: 14px 40px;
 }
 
+.approach-card {
+  grid-column: 1 / -1;
+  padding: 18px;
+  background: var(--gray);
+  border: 1px solid var(--mid);
+  border-left: 3px solid var(--accent);
+}
+
+.approach-card strong {
+  display: block;
+  color: var(--white);
+  font-size: .95rem;
+}
+
+.approach-card p {
+  margin: 10px 0 0;
+  color: #ccc;
+  font-size: .82rem;
+  line-height: 1.6;
+}
+
 .skill-row { display: flex; flex-direction: column; gap: 6px; }
 .skill-top { display: flex; justify-content: space-between; align-items: center; }
 .skill-name { font-size: .82rem; font-weight: 500; }

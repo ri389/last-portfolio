@@ -19,7 +19,7 @@ Portfolio personnel présentant mon parcours de développeur web, mes compétenc
 
 ## Projets web
 
-Les applications présentées incluent Media Downloader (Node.js, PostgreSQL, yt-dlp et Docker), ainsi que les projets du dossier `Projets/` : calculatrice, générateur de mots de passe, application de notes, quiz, générateur de citations, liste de tâches et site e-commerce.
+Les projets mis en avant sont Media Downloader (Node.js, PostgreSQL, yt-dlp et Docker) et le Quiz interactif (HTML, CSS et JavaScript).
 
 ## Lancer le portfolio
 

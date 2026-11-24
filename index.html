@@ -432,15 +432,22 @@ select {
     gap: 18px;
 }
 
+.stats-grid > div {
+    min-width: 0;
+}
+
 .stats-grid strong {
     display: block;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.4rem;
-    letter-spacing: 0.05em;
+    font-size: clamp(1.5rem, 3.2vw, 2rem);
+    line-height: 1.1;
+    letter-spacing: 0.03em;
     color: var(--accent);
+    overflow-wrap: anywhere;
 }
 
 .stats-grid span {
+    display: block;
     color: var(--muted);
 }
 
@@ -471,6 +478,10 @@ select {
     margin-top: 30px;
 }
 
+.project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .service-card i {
     font-size: 1.5rem;
     color: var(--accent);
@@ -493,6 +504,20 @@ select {
 .skills-panel {
     display: grid;
     gap: 18px;
+}
+
+.tech-approach {
+    align-content: center;
+}
+
+.tech-approach h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.tech-approach > p {
+    margin: 0;
+    color: var(--muted);
 }
 
 .skill-top {
@@ -1241,7 +1266,7 @@ select {
                     <div class="hero-content">
                         <div class="hero-intro reveal">
                             <h1>Je développe des applications web utiles et adaptées aux besoins réels.</h1>
-                            <p class="hero-summary">Développeur web, je réalise des sites et des applications avec HTML, CSS, JavaScript, React et Laravel, du front-end aux fonctionnalités côté serveur.</p>
+                            <p class="hero-summary">Développeur web, je conçois des sites et des applications en choisissant l’approche technique adaptée aux besoins et aux contraintes de chaque projet.</p>
                             <div class="hero-actions">
                                 <a href="projets.html" class="btn btn-primary">Voir mes projets</a>
                                 <a href="#contact" class="btn btn-secondary">Me contacter</a>
@@ -1261,12 +1286,12 @@ select {
                                         <span>Stages professionnels</span>
                                     </div>
                                     <div>
-                                        <strong>Plusieurs</strong>
-                                        <span>Projets web</span>
+                                        <strong>2</strong>
+                                        <span>Projets présentés</span>
                                     </div>
                                     <div>
-                                        <strong>Technologies web</strong>
-                                        <span>Adaptées selon votre besoin</span>
+                                        <strong>Adaptable</strong>
+                                        <span>Approche choisie selon le projet</span>
                                     </div>
                                     <div>
                                         <strong>2023-2026</strong>
@@ -1288,18 +1313,18 @@ select {
                     <div class="service-grid">
                         <article class="service-card reveal">
                             <i class="fas fa-code"></i>
-                            <h3>Développement front-end</h3>
-                            <p>Création de pages web responsives avec HTML, CSS, JavaScript et React.</p>
+                            <h3>Sites et applications</h3>
+                            <p>Des solutions web conçues selon les besoins des utilisateurs et le contexte du projet.</p>
                         </article>
                         <article class="service-card reveal">
                             <i class="fas fa-server"></i>
-                            <h3>Applications web</h3>
-                            <p>Développement de fonctionnalités côté serveur avec Laravel et intégration de données.</p>
+                            <h3>Fonctionnalités sur mesure</h3>
+                            <p>Des fonctionnalités pensées selon les objectifs, les contraintes et l’évolution prévue du produit.</p>
                         </article>
                         <article class="service-card reveal">
                             <i class="fas fa-screwdriver-wrench"></i>
-                            <h3>Maintenance web</h3>
-                            <p>Correction d’anomalies, amélioration de fonctionnalités et assistance technique.</p>
+                            <h3>Maintenance et évolution</h3>
+                            <p>Correction d’anomalies et adaptation des solutions aux nouveaux besoins.</p>
                         </article>
                     </div>
                 </div>
@@ -1309,25 +1334,17 @@ select {
                 <div class="container two-column">
                     <div class="section-copy reveal">
                         <p class="eyebrow">Competences</p>
-                        <h2>Des compétences techniques au service de projets web concrets.</h2>
-                        <p>Je développe des sites et des applications web en m’appuyant sur les technologies que j’utilise dans mes projets.</p>
+                        <h2>Une approche technique adaptée à chaque projet.</h2>
+                        <p>Je pars du besoin, des usages et des contraintes pour déterminer la solution la plus pertinente.</p>
                     </div>
-                    <div class="skills-panel reveal">
-                        <div class="skill-row">
-                            <div class="skill-top"><span>HTML5 / CSS3</span><span>90%</span></div>
-                            <div class="skill-bar"><span class="skill-fill" style="--level:90%"></span></div>
-                        </div>
-                        <div class="skill-row">
-                            <div class="skill-top"><span>JavaScript</span><span>70%</span></div>
-                            <div class="skill-bar"><span class="skill-fill" style="--level:70%"></span></div>
-                        </div>
-                        <div class="skill-row">
-                            <div class="skill-top"><span>Laravel</span><span>60%</span></div>
-                            <div class="skill-bar"><span class="skill-fill" style="--level:60%"></span></div>
-                        </div>
-                        <div class="skill-row">
-                            <div class="skill-top"><span>React.js</span><span>45%</span></div>
-                            <div class="skill-bar"><span class="skill-fill" style="--level:45%"></span></div>
+                    <div class="skills-panel tech-approach reveal">
+                        <div class="mini-title">Ma méthode</div>
+                        <h3>Le projet guide le choix des outils.</h3>
+                        <p>J’analyse le problème à résoudre, puis je sélectionne et mets en œuvre les technologies adaptées pour construire une solution fiable et évolutive.</p>
+                        <div class="tag-row">
+                            <span>Comprendre le besoin</span>
+                            <span>Choisir l’approche adaptée</span>
+                            <span>Faire évoluer la solution</span>
                         </div>
                     </div>
                 </div>
@@ -1435,34 +1452,7 @@ select {
                             <a href="https://github.com/ri389/Mediadownloader" target="_blank" rel="noopener noreferrer">Voir le code sur GitHub</a>
                         </article>
                         <article class="project-card reveal">
-                            <div class="project-type">Web app</div>
-                            <h3>Application Calculatrice</h3>
-                            <p>Une interface simple et lisible pour effectuer des calculs rapidement avec une presentation moderne.</p>
-                            <div class="tag-row">
-                                <span>HTML</span><span>CSS</span><span>JavaScript</span>
-                            </div>
-                            <a href="Projets/Calculator app/index.html" target="_blank" rel="noopener noreferrer">Ouvrir le projet</a>
-                        </article>
-                        <article class="project-card reveal">
-                            <div class="project-type">Web app</div>
-                            <h3>Generateur de mot de passe</h3>
-                            <p>Un outil interactif pour creer des mots de passe personnalises avec une experience claire et rapide.</p>
-                            <div class="tag-row">
-                                <span>HTML</span><span>CSS</span><span>JavaScript</span>
-                            </div>
-                            <a href="Projets/Générateur de mot de passe/index.html" target="_blank" rel="noopener noreferrer">Ouvrir le projet</a>
-                        </article>
-                        <article class="project-card reveal">
-                            <div class="project-type">Web app</div>
-                            <h3>Application de notes</h3>
-                            <p>Un bloc-notes digital axe sur la simplicite d'usage et la gestion locale du contenu.</p>
-                            <div class="tag-row">
-                                <span>HTML</span><span>CSS</span><span>JavaScript</span>
-                            </div>
-                            <a href="Projets/Note-app/index.html" target="_blank" rel="noopener noreferrer">Ouvrir le projet</a>
-                        </article>
-                        <article class="project-card reveal">
-                            <div class="project-type">Web app</div>
+                            <div class="project-type">Application web</div>
                             <h3>Quiz interactif</h3>
                             <p>Une application ludique avec score, feedback utilisateur et structure front-end simple.</p>
                             <div class="tag-row">
