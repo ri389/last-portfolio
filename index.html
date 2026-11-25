@@ -42,6 +42,52 @@ body {
     color: var(--text);
     line-height: 1.6;
     overflow-x: hidden;
+    isolation: isolate;
+}
+
+.tech-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.tech-mark {
+    position: absolute;
+    color: rgba(232, 197, 71, 0.13);
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    line-height: 1;
+    text-shadow: 0 0 28px rgba(232, 197, 71, 0.08);
+}
+
+.tech-mark--html { top: 14%; left: 4%; }
+.tech-mark--css { top: 44%; left: 8%; }
+.tech-mark--js { top: 75%; left: 5%; }
+.tech-mark--php { top: 20%; right: 5%; }
+.tech-mark--react { top: 49%; right: 7%; }
+.tech-mark--laravel { top: 79%; right: 5%; }
+.tech-mark--node { top: 61%; right: 25%; }
+.tech-mark--git { top: 31%; left: 23%; }
+.tech-mark--terminal { top: 11%; left: 57%; }
+
+@media (max-width: 640px) {
+    .tech-mark {
+        font-size: 2rem;
+        color: rgba(232, 197, 71, 0.09);
+    }
+
+    .tech-mark--css,
+    .tech-mark--node,
+    .tech-mark--git {
+        display: none;
+    }
+
+    .tech-mark--html { top: 18%; left: 3%; }
+    .tech-mark--js { top: 72%; left: 3%; }
+    .tech-mark--php { top: 32%; right: 3%; }
+    .tech-mark--react { top: 58%; right: 3%; }
+    .tech-mark--laravel { top: 84%; right: 4%; }
 }
 
 a {
@@ -57,6 +103,8 @@ select {
 }
 
 .page-shell {
+    position: relative;
+    z-index: 1;
     min-height: 100vh;
 }
 
@@ -417,6 +465,10 @@ select {
     padding: 28px;
 }
 
+.stats-card {
+    align-self: start;
+}
+
 .spotlight-card p:last-child,
 .section-copy p,
 .contact-copy p,
@@ -429,7 +481,7 @@ select {
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
+    gap: 20px 18px;
 }
 
 .stats-grid > div {
@@ -438,10 +490,11 @@ select {
 
 .stats-grid strong {
     display: block;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(1.5rem, 3.2vw, 2rem);
-    line-height: 1.1;
-    letter-spacing: 0.03em;
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(1.15rem, 2.6vw, 1.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
     color: var(--accent);
     overflow-wrap: anywhere;
 }
@@ -449,6 +502,7 @@ select {
 .stats-grid span {
     display: block;
     color: var(--muted);
+    line-height: 1.45;
 }
 
 .section-block {
@@ -1203,6 +1257,17 @@ select {
     <title>Daril Arale | Développeur web</title>
 </head>
 <body>
+    <div class="tech-backdrop" aria-hidden="true">
+        <i class="tech-mark tech-mark--html fab fa-html5"></i>
+        <i class="tech-mark tech-mark--css fab fa-css3-alt"></i>
+        <i class="tech-mark tech-mark--js fab fa-js"></i>
+        <i class="tech-mark tech-mark--php fab fa-php"></i>
+        <i class="tech-mark tech-mark--react fab fa-react"></i>
+        <i class="tech-mark tech-mark--laravel fab fa-laravel"></i>
+        <i class="tech-mark tech-mark--node fab fa-node-js"></i>
+        <i class="tech-mark tech-mark--git fab fa-git-alt"></i>
+        <i class="tech-mark tech-mark--terminal fas fa-terminal"></i>
+    </div>
     <div class="page-shell">
         <header class="site-header">
             <nav class="header">
@@ -1282,20 +1347,12 @@ select {
                             <article class="stats-card reveal">
                                 <div class="stats-grid">
                                     <div>
-                                        <strong>2+</strong>
-                                        <span>Stages professionnels</span>
+                                        <strong>Plusieurs réalisations</strong>
+                                        <span>Conçues et menées à bien</span>
                                     </div>
                                     <div>
-                                        <strong>2</strong>
-                                        <span>Projets présentés</span>
-                                    </div>
-                                    <div>
-                                        <strong>Adaptable</strong>
-                                        <span>Approche choisie selon le projet</span>
-                                    </div>
-                                    <div>
-                                        <strong>2023-2026</strong>
-                                        <span>Licence professionnelle</span>
+                                        <strong>Sur mesure</strong>
+                                        <span>Technologie adaptée au besoin</span>
                                     </div>
                                 </div>
                             </article>
@@ -1424,7 +1481,7 @@ select {
                                 <div class="timeline-head">
                                     <div>
                                         <h3>CEG Okedama</h3>
-                                        <p>Baccalaureat</p>
+                                        <p>Baccalaureat D</p>
                                     </div>
                                     <span>2020 - 2023</span>
                                 </div>
