@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">Aperçu du quiz interactif</title>
+  <desc id="desc">Interface sombre et jaune du quiz, avec choix de catégories et parcours de six questions.</desc>
+  <defs>
+    <radialGradient id="glow" cx="18%" cy="16%" r="78%">
+      <stop offset="0" stop-color="#e8c547" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#0d0d0d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1c1c1b"/>
+      <stop offset="1" stop-color="#111"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" fill="#0d0d0d"/>
+  <rect width="1200" height="680" fill="url(#glow)"/>
+  <g fill="none" stroke="#e8c547" stroke-opacity=".07">
+    <circle cx="1085" cy="420" r="240"/><circle cx="1085" cy="420" r="205"/><circle cx="1085" cy="420" r="170"/>
+  </g>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <rect x="62" y="54" width="42" height="42" rx="21" fill="#171717" stroke="#e8c547" stroke-opacity=".55"/>
+    <text x="83" y="80" fill="#e8c547" font-size="13" font-weight="700" text-anchor="middle">DA</text>
+    <text x="119" y="72" fill="#f4f0e8" font-size="12" font-weight="700" letter-spacing="1.7">DARIL ARALE</text>
+    <text x="119" y="89" fill="#777168" font-size="9" letter-spacing="1.5">PROJET INTERACTIF</text>
+    <circle cx="541" cy="76" r="4" fill="#e8c547"/>
+    <text x="555" y="80" fill="#aaa398" font-size="10" letter-spacing="1.4">QUIZ EN LIGNE</text>
+    <text x="1136" y="80" fill="#c4bcae" font-size="11" text-anchor="end">Retour au portfolio　→</text>
+    <path d="M62 119H1138" stroke="#fff" stroke-opacity=".09"/>
+
+    <text x="64" y="196" fill="#e8c547" font-family="Consolas,monospace" font-size="12" letter-spacing="2">01　—　CULTURE GÉNÉRALE &amp; NUMÉRIQUE</text>
+    <text x="60" y="275" fill="#f4f0e8" font-size="54" font-weight="700" letter-spacing="-3">La curiosité</text>
+    <text x="60" y="333" fill="#e8c547" font-size="54" font-weight="700" letter-spacing="-3">en mouvement.</text>
+    <text x="63" y="379" fill="#aaa398" font-size="16">Un défi pour apprendre, réfléchir et découvrir.</text>
+    <text x="63" y="404" fill="#aaa398" font-size="16">Choisis ton parcours et vois jusqu’où tu peux aller.</text>
+    <g fill="#c7c0b4" font-size="12">
+      <circle cx="70" cy="460" r="4" fill="#e8c547"/><text x="83" y="464">3 à 5 minutes</text>
+      <circle cx="70" cy="492" r="4" fill="#e8c547"/><text x="83" y="496">6 questions par partie</text>
+      <circle cx="70" cy="524" r="4" fill="#e8c547"/><text x="83" y="528">Culture, sciences &amp; numérique</text>
+    </g>
+
+    <rect x="485" y="151" width="653" height="465" rx="24" fill="url(#panel)" stroke="#33312a"/>
+    <path d="M485 222H1138" stroke="#fff" stroke-opacity=".08"/>
+    <rect x="514" y="171" width="33" height="33" rx="10" fill="#e8c547"/>
+    <text x="530.5" y="194" fill="#17150d" font-size="16" font-weight="800" text-anchor="middle">Q</text>
+    <text x="559" y="185" fill="#f4f0e8" font-size="11" font-weight="700" letter-spacing="1.5">LE QUIZ</text>
+    <text x="559" y="199" fill="#777168" font-family="Consolas,monospace" font-size="8" letter-spacing="1">SESSION PERSONNELLE</text>
+    <circle cx="888" cy="186" r="3" fill="#9cdbb1"/>
+    <text x="899" y="189" fill="#777168" font-family="Consolas,monospace" font-size="8">Record conservé sur cet appareil</text>
+
+    <text x="516" y="261" fill="#e8c547" font-family="Consolas,monospace" font-size="9" letter-spacing="1.5">PRÊT·E À JOUER ?</text>
+    <text x="516" y="292" fill="#f4f0e8" font-size="24" font-weight="650" letter-spacing="-1">Choisis ton terrain.</text>
+    <text x="516" y="317" fill="#aaa398" font-size="12">Six questions, avec une explication après chaque réponse.</text>
+
+    <g>
+      <rect x="516" y="342" width="287" height="79" rx="13" fill="#29251a" stroke="#e8c547" stroke-opacity=".72"/>
+      <rect x="530" y="360" width="38" height="38" rx="11" fill="#e8c547" fill-opacity=".12" stroke="#e8c547" stroke-opacity=".2"/>
+      <text x="549" y="386" fill="#e8c547" font-size="20" text-anchor="middle">✳</text>
+      <text x="581" y="375" fill="#f4f0e8" font-size="13" font-weight="600">Un peu de tout</text>
+      <text x="581" y="394" fill="#777168" font-size="10">Un parcours varié</text>
+      <circle cx="781" cy="381" r="7" fill="#e8c547"/><circle cx="781" cy="381" r="3.6" fill="#1c1c1b"/>
+
+      <rect x="817" y="342" width="292" height="79" rx="13" fill="#ffffff" fill-opacity=".018" stroke="#303030"/>
+      <rect x="831" y="360" width="38" height="38" rx="11" fill="#e8c547" fill-opacity=".07"/>
+      <text x="850" y="386" fill="#e8c547" font-size="18" text-anchor="middle">◉</text>
+      <text x="882" y="375" fill="#f4f0e8" font-size="13" font-weight="600">Culture générale</text>
+      <text x="882" y="394" fill="#777168" font-size="10">Repères &amp; découvertes</text>
+      <circle cx="1087" cy="381" r="7" fill="none" stroke="#555"/>
+
+      <rect x="516" y="432" width="287" height="79" rx="13" fill="#ffffff" fill-opacity=".018" stroke="#303030"/>
+      <rect x="530" y="450" width="38" height="38" rx="11" fill="#b8c2e0" fill-opacity=".09"/>
+      <text x="549" y="477" fill="#b8c2e0" font-size="20" text-anchor="middle">⌬</text>
+      <text x="581" y="465" fill="#f4f0e8" font-size="13" font-weight="600">Sciences</text>
+      <text x="581" y="484" fill="#777168" font-size="10">Le monde en questions</text>
+      <circle cx="781" cy="471" r="7" fill="none" stroke="#555"/>
+
+      <rect x="817" y="432" width="292" height="79" rx="13" fill="#ffffff" fill-opacity=".018" stroke="#303030"/>
+      <rect x="831" y="450" width="38" height="38" rx="11" fill="#e8c547" fill-opacity=".07"/>
+      <text x="850" y="474" fill="#e8c547" font-family="Consolas,monospace" font-size="12" text-anchor="middle">&lt;/&gt;</text>
+      <text x="882" y="465" fill="#f4f0e8" font-size="13" font-weight="600">Numérique</text>
+      <text x="882" y="484" fill="#777168" font-size="10">Web &amp; informatique</text>
+      <circle cx="1087" cy="471" r="7" fill="none" stroke="#555"/>
+    </g>
+
+    <rect x="516" y="532" width="158" height="48" rx="12" fill="#e8c547"/>
+    <text x="535" y="562" fill="#17150d" font-size="12" font-weight="700">Lancer le défi</text>
+    <path d="M638 556h17m-7-7 7 7-7 7" fill="none" stroke="#17150d" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1108" y="560" fill="#777168" font-size="10" text-anchor="end">Aucun record pour ce parcours</text>
+
+    <path d="M62 640H1138" stroke="#fff" stroke-opacity=".09"/>
+    <text x="64" y="661" fill="#716c63" font-family="Consolas,monospace" font-size="8" letter-spacing="1.2">UN PROJET DE DARIL ARALE</text>
+    <text x="1136" y="661" fill="#716c63" font-family="Consolas,monospace" font-size="8" letter-spacing="1.2" text-anchor="end">FAIT AVEC CURIOSITÉ <tspan fill="#e8c547">✳</tspan></text>
+  </g>
+</svg>

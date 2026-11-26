@@ -3,26 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0d0d0d">
+    <meta name="description" content="Un quiz interactif de culture générale, de sciences et de numérique. Choisis ton parcours, réponds à six questions et suis ta progression.">
+    <title>Le Quiz — Culture & numérique | Daril Arale</title>
     <link rel="stylesheet" href="style.css">
-    <title>Quizz app</title>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="app">
-        <h1>Quizz Simple</h1>
-        <div class="quiz">
-            <h2 id="question">Questions</h2>
-            <div id="answer-buttons">
-                <button class="btn"> Answer 1</button>
-                <button class="btn"> Answer 2</button>
-                <button class="btn"> Answer 3</button>
-                <button class="btn"> Answer 4</button>
-            </div>
-            <button id="next-button">Suivant</button>
-        </div>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+
+    <div class="site-frame">
+        <header class="topbar">
+            <a class="brand" href="../../index.html" aria-label="Retour au portfolio de Daril Arale">
+                <span class="brand-mark">DA</span>
+                <span class="brand-name">DARIL ARALE<small>PROJET INTERACTIF</small></span>
+            </a>
+
+            <a class="portfolio-link" href="../../index.html">
+                <span>Retour au portfolio</span>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M10 5l5 5-5 5"/></svg>
+            </a>
+        </header>
+
+        <main class="main-content">
+            <section class="experience-heading" aria-labelledby="page-title">
+                <h1 id="page-title">La curiosité<br><span>en mouvement.</span></h1>
+                <p class="intro-copy">Un petit défi pour apprendre, réfléchir et découvrir. Choisis ton parcours et voyons jusqu’où tu peux aller.</p>
+                <div class="heading-meta">
+                    <span><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.25"/><path d="M10 5.5v4.8l3 1.8"/></svg>3 à 5 minutes</span>
+                    <span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 2.5 2.2 4.45 4.9.72-3.55 3.46.84 4.88L10 13.7l-4.39 2.31.84-4.88L2.9 7.67l4.9-.72L10 2.5Z"/></svg>6 questions</span>
+                    <span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5.5h14M3 10h14M3 14.5h9"/></svg>Sans pression</span>
+                </div>
+                <div class="heading-decoration" aria-hidden="true"><span>{ }</span><i></i><i></i><i></i></div>
+            </section>
+
+            <section class="quiz-shell" aria-label="Quiz interactif">
+                <div class="quiz-topline">
+                    <div class="quiz-brand"><span>LE QUIZ<small>SESSION PERSONNELLE</small></span></div>
+                </div>
+
+                <section class="screen welcome-screen" id="welcome-screen" aria-labelledby="welcome-title">
+                    <h2 id="welcome-title" tabindex="-1">Choisis ton terrain.</h2>
+                    <p class="screen-description">Chaque partie contient six questions. Tu recevras une explication après chaque réponse.</p>
+
+                    <div class="category-grid" role="group" aria-label="Choisir une catégorie">
+                        <button class="category-card is-selected" type="button" data-category="mix" aria-pressed="true">
+                            <span class="category-icon category-icon-mix" aria-hidden="true">✳</span>
+                            <span class="category-copy"><strong>Un peu de tout</strong><small>Un parcours varié</small></span>
+                            <span class="category-indicator" aria-hidden="true"></span>
+                        </button>
+                        <button class="category-card" type="button" data-category="culture" aria-pressed="false">
+                            <span class="category-icon category-icon-culture" aria-hidden="true">◉</span>
+                            <span class="category-copy"><strong>Culture générale</strong><small>Repères & découvertes</small></span>
+                            <span class="category-indicator" aria-hidden="true"></span>
+                        </button>
+                        <button class="category-card" type="button" data-category="science" aria-pressed="false">
+                            <span class="category-icon category-icon-science" aria-hidden="true">⌬</span>
+                            <span class="category-copy"><strong>Sciences</strong><small>Le monde en questions</small></span>
+                            <span class="category-indicator" aria-hidden="true"></span>
+                        </button>
+                        <button class="category-card" type="button" data-category="digital" aria-pressed="false">
+                            <span class="category-icon category-icon-digital" aria-hidden="true">&lt;/&gt;</span>
+                            <span class="category-copy"><strong>Numérique</strong><small>Web & informatique</small></span>
+                            <span class="category-indicator" aria-hidden="true"></span>
+                        </button>
+                    </div>
+
+                    <div class="start-row">
+                        <button class="button-primary" id="start-button" type="button"><span>Lancer le défi</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M10 4.5l5.5 5.5-5.5 5.5"/></svg></button>
+                        <p class="best-score" id="best-score" aria-live="polite">Aucun record pour le moment</p>
+                    </div>
+                    <p class="privacy-note">Pas de compte, pas de collecte : ton record reste dans ton navigateur.</p>
+                </section>
+
+                <section class="screen question-screen" id="question-screen" aria-labelledby="question-title" hidden>
+                    <div class="question-toolbar">
+                        <button class="text-button" id="quit-button" type="button"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 4.5 7 10l5.5 5.5"/></svg>Quitter la partie</button>
+                        <span class="question-category" id="question-category">CULTURE</span>
+                    </div>
+
+                    <div class="progress-meta"><span id="question-counter">QUESTION 01 / 06</span><span id="score-counter">0 bonne réponse</span></div>
+                    <div class="progress-track" id="progress-track" role="progressbar" aria-label="Progression du quiz" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0"><span id="progress-fill"></span></div>
+
+                    <div class="question-content">
+                        <p class="question-overline" id="question-overline">À TOI DE JOUER</p>
+                        <h2 id="question-title" tabindex="-1">La question s’affichera ici.</h2>
+                        <p class="answer-hint">Sélectionne une seule réponse pour continuer.</p>
+                        <div class="answer-list" id="answer-list" role="group" aria-labelledby="question-title"></div>
+                        <div class="answer-feedback" id="answer-feedback" aria-live="polite" hidden>
+                            <span class="feedback-symbol" id="feedback-symbol" aria-hidden="true"></span>
+                            <div><strong id="feedback-title"></strong><p id="feedback-explanation"></p></div>
+                        </div>
+                    </div>
+
+                    <div class="question-footer"><span class="keyboard-hint">ASTUCE <kbd>1</kbd>–<kbd>4</kbd> POUR RÉPONDRE</span><button class="button-primary next-button" id="next-button" type="button" hidden><span>Question suivante</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M10 4.5l5.5 5.5-5.5 5.5"/></svg></button></div>
+                </section>
+
+                <section class="screen result-screen" id="result-screen" aria-labelledby="result-title" hidden>
+                    <div class="result-orbit" aria-hidden="true"><span>✦</span><i></i><i></i><i></i></div>
+                    <p class="screen-kicker">PARTIE TERMINÉE</p>
+                    <h2 id="result-title" tabindex="-1">Bien joué !</h2>
+                    <p class="result-message" id="result-message"></p>
+
+                    <div class="result-score-wrap">
+                        <div class="score-ring" id="score-ring" role="img" aria-label="Score"><div><strong id="result-score">0/6</strong><span>BONNES RÉPONSES</span></div></div>
+                        <div class="result-stats">
+                            <div><span>Précision</span><strong id="result-accuracy">0 %</strong></div>
+                            <div><span>Meilleure série</span><strong id="result-streak">0 réponse</strong></div>
+                            <div><span>Record personnel</span><strong id="result-best">0 / 6</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="result-actions"><button class="button-primary" id="replay-button" type="button"><span>Rejouer</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16 8a6.5 6.5 0 0 0-11.5-2L3 8m0-4v4h4M4 12a6.5 6.5 0 0 0 11.5 2L17 12m0 4v-4h-4"/></svg></button><button class="button-secondary" id="change-category-button" type="button">Changer de catégorie</button></div>
+                    <p class="result-note" id="new-record-note" hidden> Nouveau record personnel</p>
+                </section>
+
+                <div class="sr-only" id="announcer" role="status" aria-live="polite" aria-atomic="true"></div>
+            </section>
+        </main>
+
+        <footer class="page-footer"><span>UN PROJET DE DARIL ARALE</span></footer>
     </div>
-
-
-
-  <script src="script.js"></script>  
 </body>
 </html>
